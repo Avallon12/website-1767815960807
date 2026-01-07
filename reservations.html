@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations | Sabor & Alma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #DC2626; --secondary: #F59E0B; --dark: #1C1917; --light: #FFF7ED; }
+    body { background-color: var(--light); color: var(--dark); }
+    .glass { backdrop-filter: blur(12px); background: rgba(255, 247, 237, 0.85); border-bottom: 1px solid rgba(220, 38, 38, 0.1); }
+    .nav-link { position: relative; font-weight: 500; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4); }
+    input, select, textarea { transition: all 0.2s; }
+    input:focus, select:focus, textarea:focus { border-color: var(--primary); ring: 2px; outline: none; box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1); }
+  </style>
+</head>
+<body class="font-['Inter'] antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fas fa-pepper-hot text-red-600 text-2xl"></i>
+          <span class="text-2xl font-bold font-['Plus_Jakarta_Sans'] tracking-tight">Sabor<span class="text-amber-500">&</span>Alma</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-600 hover:text-red-600 transition">Home</a>
+          <a href="about.html" class="nav-link text-gray-600 hover:text-red-600 transition">Our Story</a>
+          <a href="menu.html" class="nav-link text-gray-600 hover:text-red-600 transition">Menu</a>
+          <a href="contact.html" class="nav-link text-gray-600 hover:text-red-600 transition">Contact</a>
+          <a href="reservations.html" class="nav-link text-red-600">Book a Table</a>
+        </div>
+        <button class="md:hidden text-gray-800"><i class="fas fa-bars text-2xl"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- RESERVATIONS HEADER -->
+  <section class="pt-40 pb-10 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold font-['Plus_Jakarta_Sans'] mb-4">Reserve Your Table</h1>
+    <p class="text-gray-600">Join us for an unforgettable evening.</p>
+  </section>
+
+  <!-- BOOKING FORM SECTION -->
+  <section class="pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12">
+        
+        <!-- FORM -->
+        <div class="lg:col-span-3 bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
+          <form>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+                <div class="relative">
+                  <i class="fas fa-calendar absolute left-4 top-3.5 text-gray-400"></i>
+                  <input type="date" class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-red-500">
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Time</label>
+                <div class="relative">
+                  <i class="fas fa-clock absolute left-4 top-3.5 text-gray-400"></i>
+                  <select class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-red-500 bg-white">
+                    <option>5:00 PM</option>
+                    <option>5:30 PM</option>
+                    <option>6:00 PM</option>
+                    <option>6:30 PM</option>
+                    <option>7:00 PM</option>
+                    <option>7:30 PM</option>
+                    <option>8:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Party Size</label>
+              <div class="flex gap-4 overflow-x-auto pb-2">
+                <button type="button" class="w-12 h-12 rounded-full border border-gray-200 hover:border-red-500 hover:text-red-500 transition font-medium">1</button>
+                <button type="button" class="w-12 h-12 rounded-full bg-red-600 text-white font-medium shadow-lg">2</button>
+                <button type="button" class="w-12 h-12 rounded-full border border-gray-200 hover:border-red-500 hover:text-red-500 transition font-medium">3</button>
+                <button type="button" class="w-12 h-12 rounded-full border border-gray-200 hover:border-red-500 hover:text-red-500 transition font-medium">4</button>
+                <button type="button" class="w-12 h-12 rounded-full border border-gray-200 hover:border-red-500 hover:text-red-500 transition font-medium">5+</button>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <input type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" placeholder="(555) 123-4567" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500">
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500">
+            </div>
+
+            <div class="mb-8">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Special Requests (Optional)</label>
+              <textarea rows="3" placeholder="Allergies, special occasion, seating preference..." class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full btn-primary py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+              Confirm Reservation
+            </button>
+          </form>
+        </div>
+
+        <!-- INFO SIDEBAR -->
+        <div class="lg:col-span-2 space-y-8">
+          <div class="bg-stone-900 text-white p-8 rounded-2xl shadow-xl">
+            <h3 class="text-xl font-bold mb-4">Dining Information</h3>
+            <ul class="space-y-4 text-gray-300 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-info-circle mt-1 text-amber-500"></i>
+                <span>Reservations are held for 15 minutes past the scheduled time.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-tshirt mt-1 text-amber-500"></i>
+                <span>Dress code is Smart Casual. No beachwear permitted.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-parking mt-1 text-amber-500"></i>
+                <span>Valet parking is available at the entrance for $10.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-br from-red-50 to-amber-50 p-8 rounded-2xl border border-red-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Large Parties?</h3>
+            <p class="text-gray-600 mb-4">For groups of 8 or more, please contact our events team directly.</p>
+            <a href="contact.html" class="text-red-600 font-bold hover:underline">Contact Events Team <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-white pt-10 pb-10 border-t border-stone-800 text-center">
+    <p class="text-stone-500 text-sm">&copy; 2024 Sabor & Alma. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | Sabor & Alma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #DC2626; --secondary: #F59E0B; --dark: #1C1917; --light: #FFF7ED; }
+    body { background-color: var(--light); color: var(--dark); }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .glass { backdrop-filter: blur(12px); background: rgba(255, 247, 237, 0.85); border-bottom: 1px solid rgba(220, 38, 38, 0.1); }
+    .nav-link { position: relative; font-weight: 500; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4); }
+  </style>
+</head>
+<body class="font-['Inter'] antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fas fa-pepper-hot text-red-600 text-2xl"></i>
+          <span class="text-2xl font-bold font-['Plus_Jakarta_Sans'] tracking-tight">Sabor<span class="text-amber-500">&</span>Alma</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-600 hover:text-red-600 transition">Home</a>
+          <a href="about.html" class="nav-link text-red-600">Our Story</a>
+          <a href="menu.html" class="nav-link text-gray-600 hover:text-red-600 transition">Menu</a>
+          <a href="contact.html" class="nav-link text-gray-600 hover:text-red-600 transition">Contact</a>
+          <a href="reservations.html" class="btn-primary px-6 py-2.5 rounded-full font-medium transition-all duration-300">Book a Table</a>
+        </div>
+        <button class="md:hidden text-gray-800"><i class="fas fa-bars text-2xl"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 bg-stone-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&h=900&fit=crop" class="w-full h-full object-cover">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-amber-500 font-bold tracking-widest uppercase mb-4 block">Our Heritage</span>
+        <h1 class="text-5xl md:text-6xl font-bold font-['Plus_Jakarta_Sans'] mb-8">From Oaxaca to <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Your Table</span></h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Sabor & Alma started with a simple dream: to honor the complex, vibrant history of Mexican cuisine while embracing the innovation of modern gastronomy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VALUES -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 text-center">
+        <div>
+          <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-heart text-3xl text-red-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Passion</h3>
+          <p class="text-gray-600">We cook with love. Every ingredient is chosen with care, and every dish is plated with pride.</p>
+        </div>
+        <div>
+          <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-3xl text-amber-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Community</h3>
+          <p class="text-gray-600">We are more than a restaurant; we are a gathering place for friends, families, and neighbors.</p>
+        </div>
+        <div>
+          <div class="w-20 h-20 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-certificate text-3xl text-stone-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Authenticity</h3>
+          <p class="text-gray-600">We stay true to the roots of Mexican cooking, using traditional methods like nixtamalization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold font-['Plus_Jakarta_Sans'] text-gray-900">Meet the Maestros</h2>
+        <p class="text-gray-600 mt-4">The talented hands behind every meal.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Team 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&h=600&fit=crop" class="w-full h-80 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Elena Rodriguez</h3>
+            <p class="text-red-600 font-medium mb-4">Executive Chef</p>
+            <p class="text-gray-500 text-sm">With 20 years of experience, Elena brings the flavors of her grandmother's kitchen to life.</p>
+          </div>
+        </div>
+        <!-- Team 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?w=500&h=600&fit=crop" class="w-full h-80 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Marco Diaz</h3>
+            <p class="text-red-600 font-medium mb-4">Sous Chef</p>
+            <p class="text-gray-500 text-sm">Master of the grill and expert in sustainable sourcing.</p>
+          </div>
+        </div>
+        <!-- Team 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop" class="w-full h-80 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Sophia Martinez</h3>
+            <p class="text-red-600 font-medium mb-4">Head Mixologist</p>
+            <p class="text-gray-500 text-sm">Curator of our extensive agave library and creator of signature cocktails.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold font-['Plus_Jakarta_Sans']">Our Journey</h2>
+      </div>
+      <div class="space-y-12 relative border-l-2 border-red-100 ml-4 md:ml-0">
+        <div class="relative pl-12 md:pl-0">
+          <div class="absolute left-[-9px] top-0 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+          <div class="md:grid md:grid-cols-5 gap-8">
+            <div class="md:col-span-1 md:text-right font-bold text-xl text-red-600">2014</div>
+            <div class="md:col-span-4">
+              <h3 class="text-xl font-bold mb-2">The Beginning</h3>
+              <p class="text-gray-600">Sabor & Alma opens its doors in a small renovated warehouse with just 10 tables.</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative pl-12 md:pl-0">
+          <div class="absolute left-[-9px] top-0 w-6 h-6 bg-amber-500 rounded-full border-4 border-white"></div>
+          <div class="md:grid md:grid-cols-5 gap-8">
+            <div class="md:col-span-1 md:text-right font-bold text-xl text-amber-600">2018</div>
+            <div class="md:col-span-4">
+              <h3 class="text-xl font-bold mb-2">Expansion</h3>
+              <p class="text-gray-600">We expanded our dining room and introduced the Agave Library, featuring over 100 spirits.</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative pl-12 md:pl-0">
+          <div class="absolute left-[-9px] top-0 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+          <div class="md:grid md:grid-cols-5 gap-8">
+            <div class="md:col-span-1 md:text-right font-bold text-xl text-red-600">2023</div>
+            <div class="md:col-span-4">
+              <h3 class="text-xl font-bold mb-2">Michelin Recognition</h3>
+              <p class="text-gray-600">Honored to receive a Bib Gourmand for exceptional food at moderate prices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-stone-900 text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Be Part of Our Story</h2>
+      <p class="text-gray-400 mb-8">Come taste the history and passion in every bite.</p>
+      <a href="contact.html" class="btn-primary px-8 py-4 rounded-full font-bold inline-block">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (Same as index) -->
+  <footer class="bg-stone-950 text-white pt-20 pb-10 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 text-center text-stone-500 text-sm">
+      <p>&copy; 2024 Sabor & Alma. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

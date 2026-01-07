@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu | Sabor & Alma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #DC2626; --secondary: #F59E0B; --dark: #1C1917; --light: #FFF7ED; }
+    body { background-color: var(--light); color: var(--dark); }
+    .glass { backdrop-filter: blur(12px); background: rgba(255, 247, 237, 0.85); border-bottom: 1px solid rgba(220, 38, 38, 0.1); }
+    .nav-link { position: relative; font-weight: 500; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4); }
+    .menu-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body class="font-['Inter'] antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="fas fa-pepper-hot text-red-600 text-2xl"></i>
+          <span class="text-2xl font-bold font-['Plus_Jakarta_Sans'] tracking-tight">Sabor<span class="text-amber-500">&</span>Alma</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-600 hover:text-red-600 transition">Home</a>
+          <a href="about.html" class="nav-link text-gray-600 hover:text-red-600 transition">Our Story</a>
+          <a href="menu.html" class="nav-link text-red-600">Menu</a>
+          <a href="contact.html" class="nav-link text-gray-600 hover:text-red-600 transition">Contact</a>
+          <a href="reservations.html" class="btn-primary px-6 py-2.5 rounded-full font-medium transition-all duration-300">Book a Table</a>
+        </div>
+        <button class="md:hidden text-gray-800"><i class="fas fa-bars text-2xl"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MENU HERO -->
+  <section class="pt-40 pb-20 bg-stone-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="text-amber-500 font-bold tracking-widest uppercase text-sm mb-4 block">Seasonal & Fresh</span>
+      <h1 class="text-5xl md:text-6xl font-bold font-['Plus_Jakarta_Sans'] mb-6">Culinary Masterpieces</h1>
+      <p class="text-xl text-gray-400">A modern interpretation of Mexican classics, using locally sourced ingredients.</p>
+    </div>
+  </section>
+
+  <!-- MENU CONTENT -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- CATEGORY: ANTOJITOS -->
+      <div class="mb-20">
+        <div class="flex items-center gap-4 mb-10">
+          <h2 class="text-3xl font-bold text-red-600">Antojitos</h2>
+          <div class="h-px bg-gray-200 flex-grow"></div>
+          <span class="text-gray-400 text-sm italic">Appetizers</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="menu-card bg-stone-50 p-6 rounded-xl transition duration-300 flex gap-6">
+            <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?w=200&h=200&fit=crop" class="w-24 h-24 rounded-lg object-cover shadow-md">
+            <div class="flex-1">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Guacamole Rustico</h3>
+                <span class="text-red-600 font-bold">$14</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">Hass avocado, serrano chile, white onion, cilantro, lime, topped with pomegranate seeds.</p>
+              <span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">V, GF</span>
+            </div>
+          </div>
+          <div class="menu-card bg-stone-50 p-6 rounded-xl transition duration-300 flex gap-6">
+            <img src="https://images.unsplash.com/photo-1599321955726-9048b5b930dc?w=200&h=200&fit=crop" class="w-24 h-24 rounded-lg object-cover shadow-md">
+            <div class="flex-1">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Elote Callejero</h3>
+                <span class="text-red-600 font-bold">$12</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">Grilled corn on the cob, cotija cheese, chili powder, lime mayo, cilantro.</p>
+              <span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">GF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY: MAIN COURSES -->
+      <div class="mb-20">
+        <div class="flex items-center gap-4 mb-10">
+          <h2 class="text-3xl font-bold text-red-600">Platos Fuertes</h2>
+          <div class="h-px bg-gray-200 flex-grow"></div>
+          <span class="text-gray-400 text-sm italic">Main Courses</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="menu-card bg-stone-50 p-6 rounded-xl transition duration-300 flex gap-6">
+            <img src="https://images.unsplash.com/photo-1593001874117-c99c800e3eb7?w=200&h=200&fit=crop" class="w-24 h-24 rounded-lg object-cover shadow-md">
+            <div class="flex-1">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Mole Negro con Pollo</h3>
+                <span class="text-red-600 font-bold">$28</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">Free-range chicken breast, 32-ingredient Oaxacan mole sauce, sesame seeds, Mexican rice.</p>
+              <span class="inline-block px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">Signature</span>
+            </div>
+          </div>
+          <div class="menu-card bg-stone-50 p-6 rounded-xl transition duration-300 flex gap-6">
+            <img src="https://images.unsplash.com/photo-1544510808-91bcbee1df55?w=200&h=200&fit=crop" class="w-24 h-24 rounded-lg object-cover shadow-md">
+            <div class="flex-1">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Carne Asada</h3>
+                <span class="text-red-600 font-bold">$34</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">Grilled skirt steak, roasted poblano peppers, grilled onions, guacamole, handmade tortillas.</p>
+              <span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">GF</span>
+            </div>
+          </div>
+          <div class="menu-card bg-stone-50 p-6 rounded-xl transition duration-300 flex gap-6">
+            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=200&h=200&fit=crop" class="w-24 h-24 rounded-lg object-cover shadow-md">
+            <div class="flex-1">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Tacos de Pescado</h3>
+                <span class="text-red-600 font-bold">$24</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">Baja style battered fish, chipotle slaw, avocado salsa, flour tortillas.</p>
+            </div>
+          </div>
+          <div class="menu-card bg-stone-50 p-6 rounded-xl transition duration-300 flex gap-6">
+            <img src="https://images.unsplash.com/photo-1504185945330-929d02097220?w=200&h=200&fit=crop" class="w-24 h-24 rounded-lg object-cover shadow-md">
+            <div class="flex-1">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Enchiladas Verdes</h3>
+                <span class="text-red-600 font-bold">$22</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">Shredded chicken, tomatillo salsa, crema, queso fresco, cilantro, onion.</p>
+              <span class="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">GF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESERVATION CTA -->
+  <section class="py-20 bg-stone-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">See Something You Like?</h2>
+      <a href="reservations.html" class="btn-primary px-10 py-4 rounded-full font-bold inline-block">Book a Table</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (Simple) -->
+  <footer class="bg-stone-950 text-white pt-10 pb-10 border-t border-stone-800 text-center">
+    <p class="text-stone-500 text-sm">&copy; 2024 Sabor & Alma. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
